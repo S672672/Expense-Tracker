@@ -1,10 +1,12 @@
 import React from 'react'
 import SideNavBar from './SideNavBar'
+import Header from './Header'
 
 function HomePage() {
   return (
-    <div>
+    <div className='flex'>
         <SideNavBar />
+        <Header />
     </div>
   )
 }
