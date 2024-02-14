@@ -1,7 +1,7 @@
 import React from 'react'
 import HeadItems from './Components/HeadItems'
 
-function Header() {
+export default function Header() {
   return (
     <div className='h-16 flex items-center justify-between px-4 w-full border-b-4'>
     <div className='font-bold text-2xl'>ExP</div>
@@ -14,5 +14,3 @@ function Header() {
     </div>
   )
 }
-
-export default Header

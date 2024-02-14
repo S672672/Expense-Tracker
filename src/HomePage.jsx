@@ -2,7 +2,7 @@ import React from 'react'
 import SideNavBar from './SideNavBar'
 import Header from './Header'
 
-function HomePage() {
+export default function HomePage() {
   return (
     <div className='flex'>
         <SideNavBar />
@@ -10,5 +10,3 @@ function HomePage() {
     </div>
   )
 }
-
-export default HomePage
