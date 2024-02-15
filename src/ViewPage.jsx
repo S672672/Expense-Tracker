@@ -1,12 +1,14 @@
 import React from 'react'
-import DashBoard from './DashBoard'
 import Header from './Header'
+import DashBoard from './DashBoard'
 
-export default function ViewPage() {
+function ViewPage() {
   return (
-    <div className='flex flex-col'>
+    <div className='flex flex-col w-screen'>
     <Header />
     <DashBoard />
     </div>
   )
 }
+
+export default ViewPage
