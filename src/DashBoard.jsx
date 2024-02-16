@@ -3,7 +3,7 @@ import NavTitle from './Components/NavTitle'
 
 function DashBoard() {
   return (
-    <div className='flex flex-col m-3 bg-gray-200'>
+    <div className='flex flex-col m-3'>
     <NavTitle NavTitle="DashBoard" />
     </div>
   )
