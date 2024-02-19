@@ -35,7 +35,7 @@ const expensesDataset = [
 const valueFormatter = (value) => `$${value}`;
 
 const chartOptions = {
-  animation: false, // Disable animations
+  animation: true, // Disable animations
 };
 
 export default function BarChart() {
@@ -46,11 +46,11 @@ export default function BarChart() {
         yAxis={[{ scaleType: 'band', dataKey: 'category' }]}
         series={[
           { dataKey: 'January', label: 'January', valueFormatter },
-          // ... add more series for each month
+          
         ]}
         layout="vertical"
-        options={chartOptions} // Pass the chart options
-        className="bg-white" // Set background color to white
+        options={chartOptions}
+        className="bg-white" 
       />
     </div>
   );
