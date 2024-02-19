@@ -7,45 +7,51 @@ const chartSetting = {
       label: 'Months',
     },
   ],
-  width: 500,
-  height: 400,
+  width: 50,
+  height: 40,
 };
 
 const expensesDataset = [
   {
     category: 'Housing',
-    January: 1200,
-    February: 1100,
-    March: 1300,
-    April: 1000,
-    May: 1050,
-    June: 1200,
-    July: 1300,
-    August: 1150,
-    September: 1100,
-    October: 1000,
-    November: 1200,
-    December: 1250,
+    January: 12,
+    February: 11,
+    March: 13,
+    April: 10,
+    May: 10,
+    June: 12,
+    July: 13,
+    August: 11,
+    September: 11,
+    October: 10,
+    November: 12,
+    December: 10,
   },
   {
     category: 'Utilities',
-    // ... similarly add expense values for each month
   },
-  // ... add more categories as needed
 ];
 
 const valueFormatter = (value) => `$${value}`;
 
-export default function ExpenseTrackerChart() {
+const chartOptions = {
+  animation: false, // Disable animations
+};
+
+export default function BarChart() {
   return (
-    <MuiBarChart
-      dataset={expensesDataset}
-      yAxis={[{ scaleType: 'band', dataKey: 'category' }]}
-      series={[{ dataKey: 'January', label: 'January', valueFormatter },
-               { dataKey: 'February', label: 'February', valueFormatter },
-               // ... add more series for each month
-      ]}
-      layout="horizontal"
-    />
+    <div className="bg-white p-4 rounded-md my-10 mx-8 h-96 w-96">
+      <MuiBarChart
+        dataset={expensesDataset}
+        yAxis={[{ scaleType: 'band', dataKey: 'category' }]}
+        series={[
+          { dataKey: 'January', label: 'January', valueFormatter },
+          // ... add more series for each month
+        ]}
+        layout="vertical"
+        options={chartOptions} // Pass the chart options
+        className="bg-white" // Set background color to white
+      />
+    </div>
   );
 }
