@@ -2,12 +2,13 @@ import {createBrowserRouter,} from "react-router-dom";
 import App from "../App";
 import AddExpenses from "../Pages/AddExpenses";
 import DashBoard from "../Pages/DashBoard";
+import Wallet from "../Pages/Wallet";
 import HomePage from "../HomePage";
 
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <App/>,
+    element: <App />,
     children: [
       {
         path: "/exp",
@@ -17,10 +18,10 @@ const router = createBrowserRouter([
         path:"/dashboard",
         element:<DashBoard />
       },
-      // {
-      //   path:'/wallet',
-      //   element:<Wallet />
-      // },
+       {
+         path:'/wallet',
+         element:<Wallet />
+       },
       // {
       //   path:'/profile',
       //   element:<Profile />

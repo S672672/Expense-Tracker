@@ -14,6 +14,8 @@ function ViewPage() {
         return 'Dashboard';
       case '/exp':
         return 'Add Expense';
+        case '/wallet':
+          return 'Wallet';
       default:
         return 'Dashboard';
     }
