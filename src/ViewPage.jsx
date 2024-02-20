@@ -10,7 +10,7 @@ function ViewPage() {
     
     <div className="flex flex-col w-screen bg-gray-100">
       <Header />
-      <NavTitle NavTitle="DashBoard" />
+      <NavTitle NavTitle="Dashboard" />
       <Outlet/>
     </div>
     
