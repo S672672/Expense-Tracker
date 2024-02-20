@@ -1,10 +1,8 @@
 import React from 'react'
-import NavTitle from '../Components/NavTitle'
 
 function AddExpenses() {
   return (
     <div className='m-3'>
-    <NavTitle NavTitle="AddExpenses" />
       <form className='m-5 p-2'>
         <label for = "Add Expenses">
         Add Expenses:
