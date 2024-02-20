@@ -9,13 +9,25 @@ const router = createBrowserRouter([
     element: <App/>,
     children: [
       {
-        path: "/add",
+        path: "/exp",
         element: <AddExpenses/>
       },
       {
-        path:"/exp",
+        path:"/dashboard",
         element:<DashBoard />
-      }
+      },
+      // {
+      //   path:'/wallet',
+      //   element:<Wallet />
+      // },
+      // {
+      //   path:'/profile',
+      //   element:<Profile />
+      // },
+      // {
+      //   path:'/setting',
+      //   element:<Setting />
+      // }
     ]
   },
 ]);
