@@ -19,8 +19,9 @@ export default function SideNavBar() {
         <NavLink to="/wallet" activeClassName="active">
         <SideNavItems icon="&#x1F4CA;" name="Wallet" arrow="&#8659;" isActive={isPageActive('/wallet')} />
         </NavLink>
-     
-        <SideNavItems icon="&#x1F4CA;" name="Profile" arrow="&#8659;" />
+        <NavLink to="/profile" activeClassName="active">
+        <SideNavItems icon="&#x1F4CA;" name="Profile" arrow="&#8659;" isActive={isPageActive('/profile')} />
+        </NavLink>
       
         <SideNavItems icon="&#x1F4CA;" name="Setting" arrow="&#8659;" />
       

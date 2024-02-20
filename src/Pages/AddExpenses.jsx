@@ -57,8 +57,8 @@ function AddExpenses() {
 
      
         <div className='mb-2 flex items-center'>
-          <input type="checkbox" id="licenseAgree" className='mr-2' />
-          <label htmlFor="licenseAgree" className="block font-bold text-gray-700">
+          <input type="checkbox" id="licenseAgree" className='mr-2 h-5 w-5' />
+          <label htmlFor="licenseAgree" className="block font-bold text-gray-700 text-xl">
             I agree with the terms and conditions
           </label>
         </div>

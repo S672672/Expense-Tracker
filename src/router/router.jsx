@@ -3,6 +3,7 @@ import App from "../App";
 import AddExpenses from "../Pages/AddExpenses";
 import DashBoard from "../Pages/DashBoard";
 import Wallet from "../Pages/Wallet";
+import Profile from "../Pages/Profile";
 import HomePage from "../HomePage";
 
 const router = createBrowserRouter([
@@ -22,10 +23,10 @@ const router = createBrowserRouter([
          path:'/wallet',
          element:<Wallet />
        },
-      // {
-      //   path:'/profile',
-      //   element:<Profile />
-      // },
+       {
+        path:'/profile',
+         element:<Profile />
+       },
       // {
       //   path:'/setting',
       //   element:<Setting />
