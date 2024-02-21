@@ -18,7 +18,8 @@ function ViewPage() {
         return 'Wallet';
       case '/profile':
         return 'Profile';
-          
+      case '/setting':
+        return 'Setting';
       default:
         return 'Dashboard';
     }

@@ -4,6 +4,7 @@ import AddExpenses from "../Pages/AddExpenses";
 import DashBoard from "../Pages/DashBoard";
 import Wallet from "../Pages/Wallet";
 import Profile from "../Pages/Profile";
+import Setting from '../Pages/Setting';
 import HomePage from "../HomePage";
 
 const router = createBrowserRouter([
@@ -27,10 +28,10 @@ const router = createBrowserRouter([
         path:'/profile',
          element:<Profile />
        },
-      // {
-      //   path:'/setting',
-      //   element:<Setting />
-      // }
+       {
+         path:'/setting',
+         element:<Setting />
+       }
     ]
   },
 ]);

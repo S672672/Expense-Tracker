@@ -22,8 +22,9 @@ export default function SideNavBar() {
         <NavLink to="/profile" activeClassName="active">
         <SideNavItems icon="&#x1F4CA;" name="Profile" arrow="&#8659;" isActive={isPageActive('/profile')} />
         </NavLink>
-      
-        <SideNavItems icon="&#x1F4CA;" name="Setting" arrow="&#8659;" />
+        <NavLink to = "/setting" activeClassName="active">
+        <SideNavItems icon="&#x1F4CA;" name="Setting" arrow="&#8659;" isActive={isPageActive('/setting')}/>
+        </NavLink>
       
         <SideNavItems icon="&#x1F4CA;" name="Log Out" arrow="&#8659;" />
     
