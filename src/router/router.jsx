@@ -6,12 +6,18 @@ import Wallet from "../Pages/Wallet";
 import Profile from "../Pages/Profile";
 import Setting from '../Pages/Setting';
 import HomePage from "../HomePage";
+import LandingPage from "../OutPages/LandingPage";
 
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <App />,
+    element: <App/>,
     children: [
+      {
+        path:'/app',
+        element:<App />
+
+      },
       {
         path: "/exp",
         element: <AddExpenses/>

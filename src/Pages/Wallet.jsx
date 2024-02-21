@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import ConnectCard from '../Components/ConnectCard';
 
 export default function Wallet() {
   const [showDashboard, setShowDashboard] = useState(false);
@@ -83,16 +84,22 @@ export default function Wallet() {
       {showDashboard && (
         <div className='fixed inset-0 flex items-center justify-center bg-gray-800 bg-opacity-75'>
           <div className='bg-white p-6 rounded-md'>
-            <div className='flex justify-between mb-4'>
+            <div className='flex justify-between gap-4 mb-4'>
               <p className='text-lg font-bold'>Connect Wallet</p>
               <div className='cursor-pointer' onClick={handleCloseDashboard}>
                 &#10006;
               </div>
             </div>
-            <p>Option 1</p>
-            <p>Option 2</p>
-            <p>Option 3</p>
-            <p>Option 4</p>
+            <hr className='border-t-2 border-gray-800 mb-5' />
+            <div className='flex flex-col text-gray-500 text-lg font-bold'>Connect with one of our available wallet providers<span> or create a new one</span></div>
+            <ConnectCard name="esewa" />
+            <ConnectCard name="esewa" />
+            <ConnectCard name="esewa" />
+            <ConnectCard name="esewa" />
+            <ConnectCard name="esewa" />
+            <ConnectCard name="esewa" />
+            <ConnectCard name="esewa" />
+            <div className='text-gray-500 text-lg font-bold cursor-pointer'>Why do i need to connect with my wallet?</div>
           </div>
         </div>
       )}
