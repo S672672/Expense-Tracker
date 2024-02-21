@@ -11,7 +11,7 @@ function AddExpenses() {
         </label>
 
         {/* Two Inputs in a Row */}
-        <div className='flex flex-wrap mb-2'>
+        <div className='flex flex-wrap mb-2 gap-2'>
           <div className='w-1/2 pr-2'>
             <label htmlFor="expensesAmount" className="block font-bold text-xl text-gray-700">
               Expenses Amount(Rs.):
@@ -27,7 +27,7 @@ function AddExpenses() {
         </div>
 
         
-        <div className='flex flex-wrap mb-2'>
+        <div className='flex flex-wrap mb-2 gap-2'>
           <div className='w-1/2 pr-2'>
             <label htmlFor="expenseType" className="block font-bold text-xl text-gray-700">
               Type of Expenses:
