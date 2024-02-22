@@ -10,15 +10,15 @@ function ViewPage() {
 
   const getPageTitle = () => {
     switch (location.pathname) {
-      case '/dashboard':
+      case '/app/dashboard':
         return 'Dashboard';
-      case '/exp':
+      case '/app/exp':
         return 'Add Expense';
-      case '/wallet':
+      case '/app/wallet':
         return 'Wallet';
-      case '/profile':
+      case '/app/profile':
         return 'Profile';
-      case '/setting':
+      case '/app/setting':
         return 'Setting';
       default:
         return 'Dashboard';

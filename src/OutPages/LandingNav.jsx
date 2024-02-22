@@ -13,7 +13,7 @@ function LandingNav() {
           Signup
         </button>
         </NavLink>
-        <NavLink to="/app" activeClassName="active">
+        <NavLink to="/login" activeClassName="active">
           <button className='bg-purple-400 rounded-md text-white font-bold text-xl border-solid border-gray-400 flex items-center justify-center p-2 px-3'>
             Login
           </button>

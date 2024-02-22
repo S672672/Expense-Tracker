@@ -8,6 +8,7 @@ import Setting from '../Pages/Setting';
 import HomePage from "../HomePage";
 import LandingPage from "../OutPages/LandingPage";
 import SignUp from "../OutPages/SignUp";
+import Login from "../OutPages/Login";
 
 const router = createBrowserRouter([
   {
@@ -19,28 +20,32 @@ const router = createBrowserRouter([
     element:<SignUp />
   },
   {
+    path:'/login',
+    element:<Login />
+  },
+  {
     path: "/app",
     element: <App/>,
     children: [
    
       {
-        path: "exp",
+        path: "/app/exp",
         element: <AddExpenses/>
       },
       {
-        path:"dashboard",
+        path:"/app/dashboard",
         element:<DashBoard />
       },
        {
-         path:'wallet',
+         path:'/app/wallet',
          element:<Wallet />
        },
        {
-        path:'profile',
+        path:'/app/profile',
          element:<Profile />
        },
        {
-         path:'setting',
+         path:'/app/setting',
          element:<Setting />
        }
    ]

@@ -10,20 +10,20 @@ export default function SideNavBar() {
   };
   return (
     <div className='h-screen w-full md:w-1/4 lg:w-1/6 border-e-2 border-gray-400'>
-    <NavLink to = "dashboard" activeClassName="active">
-        <SideNavItems icon="&#x1F4CA;" name="Dashboard" arrow="&#8659;" isActive={isPageActive('/dashboard')} />
+    <NavLink to = "/app/dashboard" activeClassName="active">
+        <SideNavItems icon="&#x1F4CA;" name="Dashboard" arrow="&#8659;" isActive={isPageActive('/app/dashboard')} />
         </NavLink>
-        <NavLink to="exp" activeClassName="active">
-        <SideNavItems icon="&#x1F4CA;" name="Add Expense" arrow="&#8659;" isActive={isPageActive('/exp')} />
+        <NavLink to="/app/exp" activeClassName="active">
+        <SideNavItems icon="&#x1F4CA;" name="Add Expense" arrow="&#8659;" isActive={isPageActive('/app/exp')} />
         </NavLink>
-        <NavLink to="wallet" activeClassName="active">
-        <SideNavItems icon="&#x1F4CA;" name="Wallet" arrow="&#8659;" isActive={isPageActive('/wallet')} />
+        <NavLink to="/app/wallet" activeClassName="active">
+        <SideNavItems icon="&#x1F4CA;" name="Wallet" arrow="&#8659;" isActive={isPageActive('/app/wallet')} />
         </NavLink>
-        <NavLink to="profile" activeClassName="active">
-        <SideNavItems icon="&#x1F4CA;" name="Profile" arrow="&#8659;" isActive={isPageActive('/profile')} />
+        <NavLink to="/app/profile" activeClassName="active">
+        <SideNavItems icon="&#x1F4CA;" name="Profile" arrow="&#8659;" isActive={isPageActive('/app/profile')} />
         </NavLink>
-        <NavLink to = "setting" activeClassName="active">
-        <SideNavItems icon="&#x1F4CA;" name="Setting" arrow="&#8659;" isActive={isPageActive('/setting')}/>
+        <NavLink to = "/app/setting" activeClassName="active">
+        <SideNavItems icon="&#x1F4CA;" name="Setting" arrow="&#8659;" isActive={isPageActive('/app/setting')}/>
         </NavLink>
         <NavLink to = "/" activeClassName="active">
         <SideNavItems icon="&#x1F4CA;" name="Log Out" arrow="&#8659;" />
