@@ -11,12 +11,11 @@ import LandingPage from "../OutPages/LandingPage";
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <App/>,
+    element: <LandingPage/>,
     children: [
       {
         path:'/app',
-        element:<App />
-
+        element:<App />,
       },
       {
         path: "/exp",
