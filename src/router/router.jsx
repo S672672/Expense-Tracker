@@ -7,38 +7,45 @@ import Profile from "../Pages/Profile";
 import Setting from '../Pages/Setting';
 import HomePage from "../HomePage";
 import LandingPage from "../OutPages/LandingPage";
+import SignUp from "../OutPages/SignUp";
 
 const router = createBrowserRouter([
   {
-    path: "/",
-    element: <LandingPage/>,
+    path:'/',
+    element:<LandingPage />,
+  },
+  {
+    path:'/signup',
+    element:<SignUp />
+  },
+  {
+    path: "/app",
+    element: <App/>,
     children: [
+   
       {
-        path:'/app',
-        element:<App />,
-      },
-      {
-        path: "/exp",
+        path: "exp",
         element: <AddExpenses/>
       },
       {
-        path:"/dashboard",
+        path:"dashboard",
         element:<DashBoard />
       },
        {
-         path:'/wallet',
+         path:'wallet',
          element:<Wallet />
        },
        {
-        path:'/profile',
+        path:'profile',
          element:<Profile />
        },
        {
-         path:'/setting',
+         path:'setting',
          element:<Setting />
        }
-    ]
-  },
+   ]
+ },
+  
 ]);
 
 export default router;
