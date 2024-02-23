@@ -9,6 +9,7 @@ import HomePage from "../HomePage";
 import LandingPage from "../OutPages/LandingPage";
 import SignUp from "../OutPages/SignUp";
 import Login from "../OutPages/Login";
+import LogoutConfirmation from "../Components/LogoutConfirmation";
 
 const router = createBrowserRouter([
   {
@@ -47,6 +48,10 @@ const router = createBrowserRouter([
        {
          path:'/app/setting',
          element:<Setting />
+       },
+       {
+        path:'/app/logout',
+        element:<LogoutConfirmation />
        }
    ]
  },

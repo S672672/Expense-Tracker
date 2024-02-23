@@ -20,6 +20,8 @@ function ViewPage() {
         return 'Profile';
       case '/app/setting':
         return 'Setting';
+      case '/app/logout':
+        return 'logout';
       default:
         return 'Dashboard';
     }
