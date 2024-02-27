@@ -74,7 +74,7 @@ export default function Wallet() {
 
         <div className='w-1/2 border-l-2 border-gray-300 pl-6'>
           <img
-            src='./src/assets/creditcard.jpg'
+            src='../src/assets/Creditcard.jpg'
             alt='Credit Card'
             className='w-full h-auto object-cover'
           />

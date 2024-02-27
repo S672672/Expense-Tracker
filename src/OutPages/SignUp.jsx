@@ -110,14 +110,14 @@ const SignupPage = () => {
               />
             </div>
           </div>
-          <div className="mb-4">
+          <div className="mb-4 mt-3">
             <input
               type="checkbox"
               id="terms"
               name="agreeTerms"
               checked={formData.agreeTerms}
               onChange={handleChange}
-              className="mr-2"
+              className="mr-2 h-5 w-5"
               required
             />
             <label htmlFor="terms" className="text-left text-lg font-semibold text-gray-600">
