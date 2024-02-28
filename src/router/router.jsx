@@ -52,7 +52,7 @@ const router = createBrowserRouter([
        {
         path:'/app/logout',
         element:<LogoutConfirmation />
-       }
+       },
    ]
  },
   
