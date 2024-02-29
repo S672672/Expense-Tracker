@@ -2,7 +2,7 @@ import React from 'react'
 
 function NotificationsSector({ name, activity, timestamp }) {
     return (
-      <div className='w-full bg-white p-2 mx-2 br-2 flex items-center cursor-pointer hover:bg-gray-100'>
+      <div className='w-full bg-white p-2 px-3 br-2 flex items-center cursor-pointer hover:bg-gray-100'>
         <img
           src='../src/assets/profile.png'
           alt={`${name}'s profile`}
