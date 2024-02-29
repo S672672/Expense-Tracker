@@ -2,14 +2,18 @@ import React, { useState } from 'react';
 import HeadItems from './Components/HeadItems';
 import Notifications from './NavBarActivities/Notifications';
 import Search from './NavBarActivities/Search';
+
 export default function Header() {
   const [showNotifications, setShowNotifications] = useState(false);
-  const[search,setSearch] = useState('')
+  const [search, setSearch] = useState(false);
 
-  const toggleSearch = ()=>{
+  const toggleSearch = () => {
+    setShowNotifications(false);
     setSearch(!search);
-  }
+  };
+
   const toggleNotifications = () => {
+    setSearch(false);
     setShowNotifications(!showNotifications);
   };
 
@@ -19,7 +23,7 @@ export default function Header() {
       <div className='flex items-end justify-around gap-4'>
         <HeadItems image="../src/assets/setting.png" />
         <div onClick={toggleSearch}>
-        <HeadItems image="../src/assets/search.jpg" />
+          <HeadItems image="../src/assets/search.jpg" />
         </div>
         <div onClick={toggleNotifications}>
           <HeadItems image="../src/assets/bell.png" />
@@ -27,7 +31,7 @@ export default function Header() {
         <HeadItems image="../src/assets/profile.png" />
       </div>
       {showNotifications && <Notifications />}
-      {search && <Search />}
+      {search && <Search toggleSearch={toggleSearch} />}
     </div>
   );
 }

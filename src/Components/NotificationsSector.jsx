@@ -6,7 +6,7 @@ export default function NotificationsSector({ name, activity, timestamp }) {
         <img
           src='../src/assets/profile.png'
           alt={`${name}'s profile`}
-          className='w-20 h-20 rounded-full mr-4'
+          className='w-20 h-20 rounded-lg mr-4'
         />
         <div className='flex-grow'>
           <div className='flex items-center justify-between mb-2'>
