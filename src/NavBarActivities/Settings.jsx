@@ -3,7 +3,9 @@ import React from 'react'
 export default function Settings() {
   return (
     <div>
-      <div className='flex'></div>
+      <div className='flex'>
+        
+      </div>
     </div>
   )
 }
