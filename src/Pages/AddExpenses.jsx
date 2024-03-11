@@ -4,13 +4,10 @@ function AddExpenses() {
   return (
     <div className='m-3'>
       <form className='m-5 p-2'>
-        {/* First Input - Full Width */}
         <label htmlFor="expenses" className="block mb-2 font-bold text-xl text-gray-700">
           Add Expenses:
           <input id="expenses" placeholder="Expenses" className='w-full p-2 rounded-md font-400 text-black' />
         </label>
-
-        {/* Two Inputs in a Row */}
         <div className='flex flex-wrap mb-2 gap-2'>
           <div className='w-1/2 pr-2'>
             <label htmlFor="expensesAmount" className="block font-bold text-xl text-gray-700">
