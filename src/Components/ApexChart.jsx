@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import ReactApexChart from 'react-apexcharts';
 import axios from 'axios';
 
-const BarChart = () => {
+const ApexChart = () => {
   const [chartData, setChartData] = useState({
     series: [{
       data: [],
@@ -82,4 +82,4 @@ const BarChart = () => {
   );
 };
 
-export default BarChart;
+export default ApexChart;
