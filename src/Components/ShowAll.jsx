@@ -10,7 +10,7 @@ export default function ShowAll({ title, amount, share, ShowIcon }) {
           <div className='bg-green-200 text-bold text-black'>{share}</div>
         </div>
       </div>
-      <img className='w-8 h-8 md:w-10 md:h-10' src={ShowIcon} alt='show' />
+      <div className='w-8 h-8 md:w-10 md:h-10 text-gray-400 text-3xl'>{ShowIcon} </div>
     </div>
   );
 }
