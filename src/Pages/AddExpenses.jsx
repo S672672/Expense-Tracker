@@ -9,7 +9,6 @@ function AddExpenses() {
   const [expenseType, setExpenseType] = useState('');
   const [date, setDate] = useState('');
   const [description, setDescription] = useState('');
-  const [agreeTerms, setAgreeTerms] = useState(false);
 
   // Function to handle file input change
   const handleFileChange = (event) => {
@@ -27,9 +26,8 @@ function AddExpenses() {
       formData.append('expenseType', expenseType);
       formData.append('date', date);
       formData.append('description', description);
-      formData.append('agreeTerms', agreeTerms);
 
-      const response = await axios.post('http://localhost:3000/expenses/add', formData, {
+      const response = await axios.post('http://localhost:3001/add-expense', formData, {
         headers: {
           'Content-Type': 'multipart/form-data',
         },
@@ -45,7 +43,6 @@ function AddExpenses() {
       setExpenseType('');
       setDate('');
       setDescription('');
-      setAgreeTerms(false);
     } catch (error) {
       console.error('Error adding expense:', error);
     }
@@ -106,7 +103,7 @@ function AddExpenses() {
         </div>
         {/* Agree Terms */}
         <div className='mb-2 flex items-center'>
-          <input type="checkbox" id="licenseAgree" checked={agreeTerms} onChange={(e) => setAgreeTerms(e.target.checked)} className='mr-2 h-5 w-5' />
+          <input type="checkbox" id="licenseAgree" className='mr-2 h-5 w-5' />
           <label htmlFor="licenseAgree" className="block font-bold text-gray-700 text-xl">
             I agree with the terms and conditions
           </label>

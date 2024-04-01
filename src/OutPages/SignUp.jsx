@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { NavLink } from 'react-router-dom';
+import axios from 'axios';
 
 const SignupPage = () => {
   const [formData, setFormData] = useState({
@@ -19,9 +20,16 @@ const SignupPage = () => {
     }));
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log('Form Submitted:', formData);
+    try {
+      const response = await axios.post('http://localhost:3001/register', formData);
+      console.log('Registration Successful:', response.data);
+      // Handle success, such as redirecting to login page
+    } catch (error) {
+      console.error('Registration Error:', error.response.data);
+      // Handle error, such as displaying error message
+    }
   };
 
   return (
@@ -128,7 +136,7 @@ const SignupPage = () => {
           <div className='flex flex-start items-center gap-3 my-3'>
           <button
             type="submit"
-            className="bg-blue-500 text-white px-4 py-2 rounded hover:bg-green-600"
+            className="cursor-pointer bg-blue-500 text-white px-4 py-2 rounded hover:bg-green-600"
           >
             Sign Up
           </button>

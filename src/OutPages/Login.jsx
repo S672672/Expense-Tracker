@@ -19,20 +19,22 @@ function Login() {
 
     const handleSubmit = async (e) => {
         e.preventDefault();
+        
+        const { email, password } = formData; // Destructure email and password from formData
     
         try {
-          const response = await axios.post('http://localhost:3000/auth/login', {
-            email,
-            password,
-          });
+            const response = await axios.post('http://localhost:3001/login', {
+                email,
+                password,
+            });
     
-          // If login is successful, redirect to the dashboard
-          window.location.href = '/app';
+            // If login is successful, redirect to the dashboard
+            window.location.href = '/app';
         } catch (error) {
-          // If login fails, display an error message to the user
-          setErrorMessage('Invalid email or password. Please try again.');
+            // If login fails, display an error message to the user
+            setErrorMessage('Invalid email or password. Please try again.');
         }
-      };
+    };
 
     return (
         <div className="flex justify-center items-center gap-20 h-screen bg-gray-100">
