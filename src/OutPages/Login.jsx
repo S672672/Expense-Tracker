@@ -8,6 +8,8 @@ function Login() {
         password: '',
         rememberDevice: false,
     });
+    const [userId, setUserId] = useState(null); // State to store user ID
+    const [errorMessage, setErrorMessage] = useState(''); 
 
     const handleChange = (e) => {
         const { name, value, type, checked } = e.target;
@@ -27,6 +29,9 @@ function Login() {
                 email,
                 password,
             });
+            const { userId } = response.data;
+            setUserId(userId);
+            console.log(userId)
     
             // If login is successful, redirect to the dashboard
             window.location.href = '/app';
