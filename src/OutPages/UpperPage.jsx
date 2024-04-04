@@ -7,7 +7,7 @@ function UpperPage() {
     <div className='flex flex-col items-center gap-5'>
     <h1 className='text-3xl text-white font-mono'>Effortlessy manage and track your expenses with our powerfull expense tracker.Get insights,save money and achieve financial freedom.</h1>
     
-    <Link to = '/app' activeClassName="active">
+    <Link to = '' activeClassName="active">
     <button className='bg-emerald-400 rounded-lg cursor-pointer text-2xl font-bold text-white p-2'>Get started</button>
     </Link>
     </div>

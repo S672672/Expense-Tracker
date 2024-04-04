@@ -1,9 +1,28 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import { NavLink } from 'react-router-dom';
+import axios from 'axios';
 
 const LogoutConfirmation = ({ onClose }) => {
-  const logout = () => {
-    onClose();
+  const navigate = useNavigate();
+  
+  const handleLogout = async () => {
+    try {
+      const response = await axios.post('http://localhost:3001/logout', null, {
+        withCredentials: true // Send cookies
+      });
+
+      if (response.status === 200) {
+        // Logout successful
+        navigate('/login'); // Redirect to login page
+      } else {
+        console.error('Logout failed');
+        // Handle logout failure
+      }
+    } catch (error) {
+      console.error('Error during logout:', error);
+      // Handle error
+    }
   };
 
   return (
@@ -13,8 +32,8 @@ const LogoutConfirmation = ({ onClose }) => {
         <div className="confirmation-content text-center">
           <span className="close absolute top-0 right-1 text-7xl text-gray-600 cursor-pointer" onClick={onClose}>&times;</span>
           <p className="mb-5 text-3xl font-bold m-5">Are you sure,<br />you want to logout?</p>
-          <NavLink to="/" activeClassName="active">
-            <button className="btn-yes bg-blue-500 hover:bg-blue-700 text-white font-black text-lg py-2 px-4 rounded mx-2" onClick={logout}>Yes</button>
+          <NavLink to="" activeClassName="active">
+            <button className="btn-yes bg-blue-500 hover:bg-blue-700 text-white font-black text-lg py-2 px-4 rounded mx-2" onClick={handleLogout}>Yes</button>
           </NavLink>
           <button className="btn-no bg-gray-500 hover:bg-gray-700 text-white font-black text-lg py-2 px-4 rounded mx-2" onClick={onClose}>No</button>
         </div>

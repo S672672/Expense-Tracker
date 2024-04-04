@@ -31,7 +31,8 @@ function Login() {
             });
             const { userId } = response.data;
             setUserId(userId);
-            console.log(userId)
+            console.log('userid:',userId)
+            console.log("login success")
     
             // If login is successful, redirect to the dashboard
             window.location.href = '/app';
